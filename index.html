@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Google Fonts Roboto 300-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Elle Pharm</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="left-header-box">
+          <div class="change-language">English(US)</div>
+          <div class="product-categories">
+            <p>Products</p>
+            <p>Brands</p>
+            <p>Manufacturers</p>
+            <p>B2B Channel</p>
+          </div>
+        </div>
+        <div class="middle-header-box">
+          <h1>Elle <span>Pharm</span></h1>
+        </div>
+        <div class="right-header-box">
+          <div class="header-icons-container">
+            <i class="fa-regular fa-user"></i>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-bag-shopping" onclick="openCarts()"></i>
+          </div>
+          <div class="search-container">
+            <div class="search-wrapper">
+              <input type="text" aria-label="search" placeholder="Search..." />
+              <i class="fa-solid fa-search"></i>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <p class="navigation-to-shop-home"><span style="color: grey;">Home</span> / Shop</p>
+
+      <h2 style="margin: 30px 0;">All Products</h2>
+
+      <div class="sort-container">
+        <span id="productsCount">150 results</span>
+        <select name="Sort By" id="sort" title="Sort By">
+            <option value="asc">Popular &uarr;</option>
+            <option value="desc">Popular &darr;</option>
+        </select>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="filter-wrapper">
+            <h2>Categories</h2>
+            <div id="categoriesFilter"></div>
+            <!-- <h2>Price</h2>
+            <div class="priceFilterContainer">
+                <input id="minPrice" type="number" placeholder="Min" >
+                <input id="maxPrice" type="number" placeholder="Max">
+            </div> -->
+            <button class="clear-btn" onclick="getProducts()">Clear Filters</button>
+        </div>
+        <div class="product-container" id="productContainer"></div>
+      </div>
+
+      <div id="cartsWrapper">
+        <div id="cartsContainer">
+            <div class="close-btn-container"><span id="closeCarts" onclick="closeCarts()">&times;</span></div>
+            <div id="cart">
+                
+            </div>
+        </div>
+      </div>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
